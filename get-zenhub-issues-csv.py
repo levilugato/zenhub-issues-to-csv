@@ -128,7 +128,6 @@ for pipeline_id in pipeline_ids:
             continue  # Skip to the next pipeline ID
 
         pipelineName = data['data']['searchIssuesByPipeline']['nodes'][0]['pipelineIssue']['pipeline']['name']
-        pipelineName = pipelineName.replace('Bugs/', 'Bugs-')
         
         # Convert the nodes to a DataFrame
         df = pd.json_normalize(nodes)
