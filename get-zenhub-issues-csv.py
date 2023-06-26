@@ -130,7 +130,6 @@ try:
                     break
 
                 pipelineName = data['data']['searchIssuesByPipeline']['nodes'][0]['pipelineIssue']['pipeline']['name']
-                pipelineName = pipelineName.replace('Bugs/', 'Bugs-')
 
                 df = pd.json_normalize(nodes)
                 df['labels_name'] = df['labels.nodes'].apply(lambda x: ', '.join([label['name'] for label in x]))
